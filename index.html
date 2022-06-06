@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Aadi Prashar 12COMPSCI - Game Page</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="12COMP mini skills">
+    <meta name="keywords" content="12COMP, mini skills">
+    <meta name="author" content="Mr Bob">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- P5.js ***************************************-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <!-- Firebase libraries -->
+    <!-- Firebase App Must Be First -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+  </head>
+  <body>
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+        <div class="p-4 pt-5">
+          <h1><a href="index.html" class="logo">Games</a></h1>
+          <!-- Links -->
+          <ul class="list-unstyled components mb-5">
+            <li class="active">
+            <li>
+              <a href="#" onclick="gameTitle('Game #01')">Game One</a>
+            </li>
+            </li>
+            <li>
+              <a href="#" onclick="gameTitle('Game #02')">Game Two</a>
+            </li>
+            <li>
+              <a href="#" onclick="gameTitle('Game #03')">Game Three</a>
+            </li>
+            <li>
+              <a href="#" onclick="mainApp.logOut();"><b>Log Out</b></a>
+            </li>
+            <li>
+              <a href="#" id="startButton" onclick="startButton();">Start</a>
+            </li>
+          </ul>
+          <div class="footer">
+            <p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </nav>
+      <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <h2 id="gameTitle" class="mb-4">Game #01</h2>
+        
+        <!-- Canvas Container -->
+        <div id="canvasContainer" class="canvasContainer">
+        </div>
+        
+      </div>
+    </div>
+  </body>
+  <!-- Script tags after body, so body loads first then script -->
+  <!-- Personal Scripts -->
+  <script src="js/fireBase.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/setup.js"></script>
+  <script src="js/gameOne.js"></script>
+  <script src="js/gameTwo.js"></script>
+  <script src="js/gameThree.js"></script>
+</html>
